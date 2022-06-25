@@ -8,3 +8,7 @@ func main() {
 	b := 20
 	fmt.Println("This sum of two number", a/b)
 }
+
+func calculation() {
+
+}
