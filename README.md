@@ -4,22 +4,23 @@ Learning git
 -----Let's learn GIT/GITHUB-------
 
 01)git --version   -->check installed or not on cmd
-02)git config --global user.name "Afzal Ansari"
-03)git config --global user.email "abc@gmail.com"
-04)git config --global --edit  -->edit the name and email
-05)escape :wq press enter  --> come back to gitbash window
-06)git init  -->to initialise
-07)git add sum.go  -->Now the file is tracked, files goes to staging area(before repository).
-08)git commit -m "initial commit"  -->will commit the changes
-09)git log  -->show how much commit happened
-10)git add . -->it insert all the files in staging area
-11)git checkout hexCode  -->will take come back to initial state based on hexCode
-12)git checkout master   -->will take go forward again
-13)git branch dev    -->another branch created(one master branch can have many branches)
-14)git branch or git branch -a   ->to see a branch or all branches
-15)git branch afzal/multiply  -->do code of this functionality and commit
-16)git merge afzal/multiply  -->will insert all the code from afzal/multiply branch to dev branch
-17)git merge dev             -->will insert all the code from dev branch to master branch
+02)git init  -->to initialize(convert a folder to working directory)
+03)git config --global user.name "Afzal Ansari"
+04)git config --global user.email "abc@gmail.com"
+05)git config --global --edit  -->edit the name and email
+06)git congfig --global --list  -->verify the configuration
+07)escape :wq press enter  --> come back to gitbash window
+08)git add sum.go  -->Now the file is tracked, files goes to staging area(before repository).
+09)git commit -m "initial commit"  -->will commit the changes
+10git log  -->show how much commit happened
+11)git add . -->it insert all the files in staging area
+12)git checkout hexCode  -->will take come back to initial state based on hexCode
+13)git checkout master   -->will take go forward again
+14)git branch dev    -->another branch created(one master branch can have many branches)
+15)git branch or git branch -a   ->to see a branch or all branches
+16)git branch afzal/multiply  -->do code of this functionality and commit
+17)git merge afzal/multiply  -->will insert all the code from afzal/multiply branch to dev branch
+18)git merge dev             -->will insert all the code from dev branch to master branch
 
 
 git branch -a  -->show all branches
