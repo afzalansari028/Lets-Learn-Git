@@ -21,10 +21,17 @@ Learning git
 16)git branch afzal/multiply  -->do code of this functionality and commit
 17)git merge afzal/multiply  -->will insert all the code from afzal/multiply branch to dev branch
 18)git merge dev             -->will insert all the code from dev branch to master branch
+19)git branch -d branche_name  -->delete the local branch
 
 
-git branch -a  -->show all branches
-git branch -d branche_name  -->delete the local branch
+Git Rebase:-when u want to do create a latest commit from child branch to parent--
+   git checkout test
+   git rebase master
+
+   git chcekout master
+   git merge test  -->from master <- test (merging from test to master)
+
+   git rebase -i HEAD~4 -->you can rearrange the commits, after that press :wq to come out
 
 
 ----Once the repository created---
