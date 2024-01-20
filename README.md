@@ -32,7 +32,10 @@ Git Rebase:-when u want to do create a latest commit from child branch to parent
    git merge test  -->from master <- test (merging from test to master)
 
    git rebase -i HEAD~4 -->you can rearrange the commits, after that press :wq to come out
+   git rebase -i HEAD~4 -->replace pick by squash(remove cmd) will destroy/remove the commit.
 
+   How to selectively pickup the commit child branch to master branch
+   git cherry-pick comt_id1 comt_id2
 
 ----Once the repository created---
 git remote -v
