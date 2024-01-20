@@ -24,7 +24,7 @@ Learning git
 19)git branch -d branche_name  -->delete the local branch
 
 
-Git Rebase:-when u want to do create a latest commit from child branch to parent--
+Git Rebase:-when u want to do create a latest commit from child branch to mastere branch--
    git checkout test
    git rebase master
 
@@ -36,6 +36,18 @@ Git Rebase:-when u want to do create a latest commit from child branch to parent
 
    How to selectively pickup the commit child branch to master branch
    git cherry-pick comt_id1 comt_id2
+
+Git Stash:-hide the source code of unfinished work in such a way that git cannot access, and continie work on some other files.
+   git stash     --> stash staged files
+   git stash -u  --> stash staged and untracked files
+   git stash pop --> get back the stashed files
+
+ Amend:-if you did a very minor change after committed and you want to add the file to existing commit.
+   git add .
+   git commit --amend -m "commit message"
+
+ Git reset:- to go back the previous version of code
+   git reset --hard comt_id
 
 ----Once the repository created---
 git remote -v
