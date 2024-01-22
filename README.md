@@ -41,6 +41,7 @@ Git Stash:-hide the source code of unfinished work in such a way that git cannot
    git stash     --> stash staged files
    git stash -u  --> stash staged and untracked files
    git stash pop --> get back the stashed files
+   git stash list -->show the stashed files
 
  Amend:-if you did a very minor change after committed and you want to add the file to existing commit.
    git add .
