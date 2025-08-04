@@ -3,70 +3,81 @@ Learning git
 
 -----Let's learn GIT/GITHUB-------
 
-01)git --version   -->check installed or not on cmd
-02)git init  -->to initialize(convert a folder to working directory)
-03)git config --global user.name "Afzal Ansari"
-04)git config --global user.email "abc@gmail.com"
-05)git config --global --edit  -->edit the name and email
-06)git congfig --global --list  -->verify the configuration
-07)escape :wq press enter  --> come back to gitbash window
-08)git add sum.go  -->Now the file is tracked, files goes to staging area(before repository).
-09)git commit -m "initial commit"  -->will commit the changes
-10git log  -->show how much commit happened
-11)git add . -->it insert all the files in staging area
-12)git checkout hexCode  -->will take come back to initial state based on hexCode
-13)git checkout master   -->will take go forward again
-14)git branch dev    -->another branch created(one master branch can have many branches)
-15)git branch or git branch -a   ->to see a branch or all branches
-16)git branch afzal/multiply  -->do code of this functionality and commit
-17)git merge afzal/multiply  -->will insert all the code from afzal/multiply branch to dev branch
-18)git merge dev             -->will insert all the code from dev branch to master branch
-19)git branch -d branche_name  -->delete the local branch
+```bash
+# Setup:
+git --version                      # Check if Git is installed
+git config --global user.name "Afzal Ansari"
+git config --global user.email "abc@gmail.com"
+git config --global --edit        # Edit name and email
+git config --global --list        # Verify configuration
 
+#T o save and exit the config editor:
+:wq                                # (Press `Esc`, then type `:wq` and press Enter)
 
-Git Rebase:-when u want to do create a latest commit from child branch to mastere branch--
-   git checkout test
-   git rebase master
+# Git Basics:
+git init                           # Initialize a Git repository in current folder
+git add sum.go                     # Add a file to staging area
+git add .                          # Add all files to staging area
+git commit -m "initial commit"     # Commit the staged changes
+git log                            # View commit history
 
-   git chcekout master
-   git merge test  -->from master <- test (merging from test to master)
+# Branching and Merging:
+git branch dev                     # Create a new branch named 'dev'
+git branch                         # List local branches
+git branch -a                      # List all branches (local and remote)
+git checkout dev                   # Switch to the 'dev' branch
+git checkout <commit_hash>        # Checkout a specific commit by its hash
+git checkout master                # Switch back to the 'master' branch
+git branch afzal/multiply          # Create a new feature branch from current branch
+git checkout afzal/multiply        # Switch to the 'afzal/multiply' branch
+# (make changes and commit them on afzal/multiply)
 
-   git rebase -i HEAD~4 -->you can rearrange the commits, after that press :wq to come out
-   git rebase -i HEAD~4 -->replace pick by squash(remove cmd) will destroy/remove the commit.
+git checkout dev                   # Switch to 'dev' branch
+git merge afzal/multiply           # Merge 'afzal/multiply' into 'dev'
 
-   How to selectively pickup the commit child branch to master branch
-   git cherry-pick comt_id1 comt_id2
+git checkout master                # Switch to 'master' branch
+git merge dev                      # Merge 'dev' into 'master'
+git branch -d branch_name          # Delete a local branch
+-----------------------------------------------------------
+#Git Rebase:
+git checkout test
+git rebase master                  # Apply commits from master onto test
 
-Git Stash:-hide the source code of unfinished work in such a way that git cannot access, and continie work on some other files.
-   git stash     --> stash staged files
-   git stash -u  --> stash staged and untracked files
-   git stash pop --> get back the stashed files
-   git stash list -->show the stashed files
+git checkout master
+git merge test                     # Merge test → master
 
- Amend:-if you did a very minor change after committed and you want to add the file to existing commit.
-   git add .
-   git commit --amend -m "commit message"
+git rebase -i HEAD~4               # Interactive rebase last 4 commits
 
- Git reset:- to go back the previous version of code
-   git reset --hard comt_id
+Selectively apply commits to another branch:
+git cherry-pick commit_id1 commit_id2
 
-----Once the repository created---
-git remote -v
+# Hide your local uncommitted changes temporarily.
+git stash                          # Stash tracked files
+git stash -u                       # Stash tracked + untracked files
+git stash list                     # Show all stashes
+git stash pop                      # Apply latest stash
+
+# Git Amend:
+Modify the most recent commit (e.g., for a small fix).
+git add .
+git commit --amend -m "Updated commit message"
+
+# Git Reset:
+Go back to a specific commit (destructive operation).
+git reset --hard commit_id
+
+# Pushing to GitHub:
+git remote -v                                          # Verify remote repo
 git remote add origin https://github.com/afzalansari028/Lets-Learn-Git.git
-git branch -M master
-git push -u origin master
+git branch -M master                                   # Rename main to master (if needed)
+git push -u origin master                              # Push code to GitHub
 
-
----Want some changes in diff.go file---
-do changes in the file or add functionality
+# Make some changes to diff.go
 git add diff.go
-git commit -m "added one function in diff.go"
-git push or  git push -u origin master
+git commit -m "Added one function in diff.go"
+git push
 
-
-
-
----Some basic commands---
-mkdir -->create folder
-cd\   -->back space
-clear -->clear screen
+# Some Basic Shell Commands:
+mkdir folder_name         # Create a folder
+cd ..                     # Go back one directory
+clear                     # Clear the terminal screen
