@@ -55,7 +55,9 @@ git cherry-pick commit_id1 commit_id2
 git stash                          # Stash tracked files
 git stash -u                       # Stash tracked + untracked files
 git stash list                     # Show all stashes
-git stash pop                      # Apply latest stash
+git stash show -p stash@{0}        # Show stashed code changes too
+git pull                           # pull the latest changes from repo.
+git stash pop                      # get back the stashed files and changes.
 
 # Git Amend:
 Modify the most recent commit (e.g., for a small fix).
